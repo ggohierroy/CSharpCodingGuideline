@@ -116,3 +116,15 @@ public void Filter(IQueryable<Car> cars, SearchCriteria criteria)
     cars = cars.Where(c => c.NumberOfWheels == (int) criteria.NumberOfWheels);
 }
 ```
+
+## Exception Handling
+
+- Do not throw the generic Exception.
+- Create specific exceptions that derive from Exception instead.
+
+> Why? To be able to treat these exceptions differently than the other ones.
+
+- Handle only specific exceptions.
+- All other exceptions should be caught by a global unhandled exception manager and **logged**.
+
+> Why? Because you should only handle exceptions that you know how to handle.
