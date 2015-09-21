@@ -81,7 +81,16 @@ public IEnumerable GetNumbers(List<int> idList)
 ## Packages
 
 - Always manage packages using Nuget at the solution level.
+
 > Why? To make sure all projects use the same version of the package.
 
 - Never check-in packages into TFS.
+
 > Why? To save space on TFS.
+
+## Configuration Files
+
+- Always use custom configuration sections
+- Do not use AppSettings
+
+> Why? To be able to use strongly-typed settings, as well as default values and required settings.
