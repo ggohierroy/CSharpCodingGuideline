@@ -94,3 +94,25 @@ public IEnumerable GetNumbers(List<int> idList)
 - Do not use AppSettings
 
 > Why? To be able to use strongly-typed settings, as well as default values and required settings.
+
+## Entity Framework
+
+- Filtering out deleted records
+
+```csharp
+// Yes
+var car = db.Cars.FirstOrDefault(c => c.Deleted == false);
+
+// No
+var car = db.Cars.FirstOrDefault(c => !c.Deleted);
+```
+
+- Filtering pattern
+
+```csharp
+public void Filter(IQueryable<Car> cars, SearchCriteria criteria)
+{
+  if(criteria.NumberOfWheels.HasValue)
+    cars = cars.Where(c => c.NumberOfWheels == (int) criteria.NumberOfWheels);
+}
+```
