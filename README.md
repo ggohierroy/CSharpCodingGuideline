@@ -42,6 +42,39 @@ var numberOfWheels = 3;
 var intNumberOfWheels = 3;
 ```
 
+## Naming Convention
+
+Entity Kind  | Convention
+------------ | -------------
+Types and namespaces  | UpperCamelCase
+Interfaces  | IUpperCamelCase
+Type parameters | TUpperCamelCase
+Methods, properties and events | UpperCamelCase
+Local variables | lowerCamelCase
+Local constants | lowerCamelCase
+Parameters | lowerCamelCase
+Fields (not private) | UpperCamelCase
+Instance fields (private) | _lowerCamelCase
+Static fields (private) | _lowerCamelCase
+Constant fields (not private) | UpperCamelCase
+Constant fields (private) | UpperCamelCase
+Static readonly fields (not private) | UpperCamelCase
+Static readonly fields (private) | UpperCamelCase
+Enum members | UpperCamelCase
+All other entities | UpperCamelCase
+
+## Files
+
+- Files should have the same name as the class it contains.
+- A file should generally not contain more than one class.
+
+## Namespaces
+
+- Namespaces should be modeled after the file structure of the project.
+
+## Fields
+- Fields should (almost) always be kept private.
+
 ## Methods
 
 - Return the most specific types and accept the most generic ones.
