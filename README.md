@@ -112,12 +112,17 @@ public IEnumerable GetNumbers(List<int> idList)
 
 - Entity Framework **is** the data access tier.
 
-### Models
+#### Entity Framework Model
 
-- Each business object should have 1 model and 2 DTOs
-  - The model: a representation of what's in the database
-  - The search result DTO: a representation of what's usually displayed in the result grid
-  - The model DTO: a representation of what's usually displayed in the properties tab
+-  Has data annotations.
+-  Has validation attributes.
+-  Has navigation properties.
+
+### Data Transfer Objects (DTO)
+
+- Has description properties.
+- Has `Exportable` attributes.
+- Has `JSON` specific attributes (`JSONIgnore`, `JSONConverter`).
 
 ## Comments
 
