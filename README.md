@@ -94,6 +94,30 @@ public IEnumerable GetNumbers(List<int> idList)
   ...
 }
 ```
+## Architecture
+
+### Controllers
+
+- Controllers should not contain any logic. Logic should be found in the business tier.
+- Every public method should have a security attribute. Security is extremely important.
+- For security reasons, unused methods should be removed.
+- Controllers should return DTOs (Data Transfer Objects)
+
+### Business Tier
+
+- Every business object should inherit from `BusinessObjectBase`.
+- The mappings should be configured in a static method. This method will be called once at `Application_Start`.
+
+### Data Access Tier
+
+- Entity Framework **is** the data access tier.
+
+### Models
+
+- Each business object should have 1 model and 2 DTOs
+  - The model: a representation of what's in the database
+  - The search result DTO: a representation of what's usually displayed in the result grid
+  - The model DTO: a representation of what's usually displayed in the properties tab
 
 ## Comments
 
