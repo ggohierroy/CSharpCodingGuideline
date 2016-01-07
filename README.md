@@ -112,7 +112,7 @@ public IEnumerable GetNumbers(List<int> idList)
 
 - Entity Framework **is** the data access tier.
 
-#### Entity Framework Model
+### Entity Framework Model
 
 -  Has data annotations.
 -  Has validation attributes.
